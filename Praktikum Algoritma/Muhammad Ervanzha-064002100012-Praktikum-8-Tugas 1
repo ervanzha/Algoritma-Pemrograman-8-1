@@ -1,0 +1,22 @@
+@author: ervan
+"""
+
+def fibbo(x):
+    if x <= 0 :
+        return x
+    else:
+        return fibbo(x-1) + fibbo(x-2)
+
+def cetak(y):
+    if y <= 0:
+        print("Angka positif")
+    else:
+        print('Bilangan Fibbonaci ke'+str(y),'adalah',fibbo(y))
+
+while True:
+    try:
+        bilangan = int(input("Masukan bilangan :"))
+    except ValueError:
+        print("Invalid input, masukan angka bulat!\n")
+    else:
+        cetak(bilangan)
